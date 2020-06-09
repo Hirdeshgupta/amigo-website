@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <!-- Tailwind css -->
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
+    <!-- Swiper js -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <style>
+      .spinner-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color:#3F51B5;
+      z-index: 999999;
+      }
+      .sk-chase {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 48%;
+        left: 48%;
+        animation: sk-chase 2.5s infinite linear both;
+      }
+      
+      .sk-chase-dot {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0; 
+        animation: sk-chase-dot 2.0s infinite ease-in-out both; 
+      }
+      
+      .sk-chase-dot:before {
+        content: '';
+        display: block;
+        width: 25%;
+        height: 25%;
+        background-color: #fff;
+        border-radius: 100%;
+        animation: sk-chase-dot-before 2.0s infinite ease-in-out both; 
+      }
+      
+      .sk-chase-dot:nth-child(1) { animation-delay: -1.1s; }
+      .sk-chase-dot:nth-child(2) { animation-delay: -1.0s; }
+      .sk-chase-dot:nth-child(3) { animation-delay: -0.9s; }
+      .sk-chase-dot:nth-child(4) { animation-delay: -0.8s; }
+      .sk-chase-dot:nth-child(5) { animation-delay: -0.7s; }
+      .sk-chase-dot:nth-child(6) { animation-delay: -0.6s; }
+      .sk-chase-dot:nth-child(1):before { animation-delay: -1.1s; }
+      .sk-chase-dot:nth-child(2):before { animation-delay: -1.0s; }
+      .sk-chase-dot:nth-child(3):before { animation-delay: -0.9s; }
+      .sk-chase-dot:nth-child(4):before { animation-delay: -0.8s; }
+      .sk-chase-dot:nth-child(5):before { animation-delay: -0.7s; }
+      .sk-chase-dot:nth-child(6):before { animation-delay: -0.6s; }
+      
+      @keyframes sk-chase {
+        100% { transform: rotate(360deg); } 
+      }
+      
+      @keyframes sk-chase-dot {
+        80%, 100% { transform: rotate(360deg); } 
+      }
+      
+      @keyframes sk-chase-dot-before {
+        50% {
+          transform: scale(0.4); 
+        } 100%, 0% {
+          transform: scale(1.0); 
+        } 
+      }
+          </style>
+    <style>
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+@media(max-width:600px){
+    ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+    }
+}
+body{
+            font-family: "Montserrat", sans-serif;
+            width: 100vw;
+            overflow-x: hidden;
+            
+}
+    .swiper-container {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+          }
+    .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 40%;
+            height: 80vh;
+      
+          }
+               @media(max-width:700px){
+            .swiper-slide {
+                width: 70%;
+              }
+        }
+
+
+
+
+
+h6 {
+  line-height: 1.7;
+}
+.demo{ background: #f0e0d4;
+ }
+.our-team{
+    text-align: center;
+    position: relative;
+}
+.our-team .pic{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 8px solid #7a4b94;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.our-team img{
+    width: 100%;
+    height: auto;
+}
+.our-team .social{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    transition: all 0.3s ease-out 0s;
+}
+.our-team .social li a{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    background: #f28a31;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 5px;
+    transform: scale(0);
+    transition: all 0.2s ease 0s;
+}
+.our-team:hover .social li a{ transform: scale(1); }
+.our-team:hover .social li a:hover{ background: #7a4b94; }
+.our-team .team-content{
+    padding: 15px 15px 20px;
+    background: #7a4b94;
+    border-radius: 40px 10px;
+    margin-top: -20px;
+    color: #fff;
+}
+.our-team .title{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+}
+.our-team .post{
+    display: block;
+    font-size: 14px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.our-team .description{
+    padding: 20px;
+    background: #fff;
+    border-radius: 20px;
+    font-size: 16px;
+    color: #666;
+    line-height: 30px;
+    margin-bottom: 0;
+}
+@media only screen and (max-width: 990px){
+    .our-team{ margin-bottom: 30px; }
+}
+@media only screen and (max-width: 359px){
+    .our-team .pic{
+        width: 150px;
+        height: 150px;
+    }
+    .our-team .social{ top: 20px; }
+}
+#navbar{
+  opacity: 0;
+  transform: translateY(-100px);
+}
+
+
+nav {
+            color: white;
+            opacity: 0;
+            z-index: 1;
+            position: fixed;
+            background: rgba(10, 10, 10, 0);
+
+
+        }
+nav #logo {
+                margin-top: 0;
+                border-radius: 10px 2px 2px 10px;
+                opacity: 1;
+                box-shadow: -4px 4px 5px 0px rgba(98,98,98,1);
+              }
+        .line{
+            position: relative;
+            height: 2px;
+            background: white;
+            top: 8px;
+            -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+            width: 100%;
+        }
+        .nav-link{
+            color: white;
+            font-weight: 500;
+            font-size: 1.5rem;
+        }
+        .nav-link:hover{
+            color: white;
+        }
+        .navbar {
+            font-weight: 300;
+            -webkit-box-shadow: 0 0 0  0 rgba(0,0,0,0.16), 0 0 0 0 rgba(0,0,0,0.12);
+            box-shadow: 0 0 0  0 rgba(0,0,0,0.16), 0 0 0  0 rgba(0,0,0,0.12);
+        }
+        .navback{
+            background:rgba(255, 255, 255, 0.9);
+            color: black;
+        }
+</style>
+    </style>
+
+    <title>Amigo!</title>
+  </head>
+  <body>
+    <div class="spinner-wrapper">
+      <div class="sk-chase">
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+      </div>
+      </div>
+             <!--Navbar-->
+<nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top" >
+
+    <div class="container-fluid"> 
+  
+      <a class="navbar-brand" href="#">
+        <img  class="w-20 ml-0" src="images/logo.png" id="logo" height="30" alt="mdb logo">
+      </a>
+  
+      <!-- Collapse button -->
+      <button id="navbtn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+              aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="basicExampleNav">
+  
+        <!-- Left -->
+        <ul class="navbar-nav mr-auto ">
+          <li class="nav-item ml-4 navitem">
+            <a class="nav-link " style="color: white;" href="index.html" >Home<div class="line"></div></a>
+          </li>
+          <li class="nav-item ml-4 navitem">
+            <a class="nav-link " style="color: white;"  href="aboutus.html" >About Us<div class="line"></div></a>
+          </li>
+          <li class="nav-item ml-4 navitem">
+            <a class="nav-link " style="color: white;"  href="contact.html" >Contact <div class="line"></div></a>
+          </li>
+        </ul>
+  
+        <!-- Right -->
+        <ul class="navbar-nav nav-flex-icons">
+          <a href="https://play.google.com/store/apps/details?id=com.altiet.amigo">
+            <button  type="button" class="ftlbtn ml-4 btn  waves-effect" style="font-weight: 500; font-size: 1.1rem; margin-right: 1rem; padding:10px;color: white;"><i class="fa fa-download mr-2"></i> DOWNLOAD NOW</button></a>
+          <li class="nav-item navicons">
+            <a href="https://www.facebook.com/AmigoByAltiett/ " class="nav-link" >
+              <i style="color: white;"  class="fab fa-facebook-f"></i>
+            </a>
+          </li> 
+          <li class="nav-item navicons">
+            <a href="https://www.instagram.com/amigo_altiett/ " class="nav-link" >
+              <i style="color: white;"  class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li class="nav-item navicons">
+            <a href="https://www.youtube.com/channel/UCsYaiGaw0EyWl0iDm9q8oCQ?view_as=subscriber" class="nav-link "
+               >
+              <i style="color: white;"  class="fab fa-youtube"></i>
+            </a>
+          </li>
+        </ul>
+  
+      </div>
+  
+    </div>
+  
+  </nav>
+
+
+
+
+<!-- Main navigation -->
+<header>
+<!-- Full Page Intro -->
+<div class="view" style=" height:auto; width:100%;background-image: url(images/connectbg.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+    <!-- Mask & flexbox options-->
+    <div class="   rgba-indigo-strong d-flex justify-content-center align-items-center " >
+      <!-- Content -->
+      <div class="container">
+        <div class="row pt-lg-5 mt-lg-5">
+            <!--Grid column-->
+            <div class="pt-20 col-md-6 mb-5 mt-md-0 mt-5 white-text text-center text-md-left wow fadeInLeft"
+              data-wow-delay="0.3s">
+              <h1 class="display-4 font-weight-bold topanime">Privacy Policy</h1>
+              <hr class="hr-light hrabout">
+              <h6 class="mb-3 topanime1">This Privacy Policy explains our practices regarding the collection, use, disclosure, and protection of information that is collected through our Service, as well as your choices regarding the collection and use of information.
+                Before accessing or using our Service, please ensure that you have read and understood how we collect,store, use and disclose your personal information as described in the Privacy Policy that is relevant to you.</h6>
+            </div>
+            <div class="col-md-6 col-xl-5 mb-4 leftanime">
+            <img src="images/privacy.png" alt="" class="img-fluid">
+              </div>
+            </div>
+            
+        <!--Grid row-->
+
+      </div>
+      <!-- Content -->
+      
+      
+    </div>
+    <!-- Mask & flexbox options-->
+  </div>
+  <!-- Full Page Intro -->
+
+</header>
+<!-- Main navigation -->
+<div class="container mt-20">
+    <strong class="text-2xl" style="font-weight: 500;">Privacy Policy</strong> <p>
+                  Altiett Technologies  built the Amigo app as
+                  a Free app. This SERVICE is provided by
+                  Altiett Technologies  at no cost and is intended for use as
+                  is.
+                </p> <p>
+                  This page is used to inform visitors regarding our
+                  policies with the collection, use, and disclosure of Personal
+                  Information if anyone decided to use our Service.
+                </p> <p>
+                  If you choose to use our Service, then you agree to
+                  the collection and use of information in relation to this
+                  policy. The Personal Information that we collect is
+                  used for providing and improving the Service. we will not use or share your information with
+                  anyone except as described in this Privacy Policy.
+                </p> <p>
+                  The terms used in this Privacy Policy have the same meanings
+                  as in our Terms and Conditions, which is accessible at
+                  Amigo unless otherwise defined in this Privacy Policy.
+                </p> <p><strong class="text-2xl" style="font-weight: 500;">Information Collection and Use</strong></p> <p>
+                  For a better experience, while using our Service, we
+                  may require you to provide us with certain personally
+                  identifiable information, including but not limited to Alteitt Technologies is a startup founded by students of IIT ISM DHANBAD .We aim at providing technological solutions to the problems prevalent in the society . Amigo is our first such service. The information that
+                  we request will be retained by us and used as described in this privacy policy.
+                </p> <div><p>
+                  We collect the following types of information about you:
+Registration and Profile Information: When you create an account, we may collect your personal information such as your username, first and last name, email address, mobile phone number and profile photo.
+Geolocation: We collect your location information through your device IP address , and GPS coordinates (e.g., latitude/longitude) available through users mobile device. We may also gather information about your location using other technologies and sensors which may provide us with information about nearby devices, Wi-Fi access points and networks, and nearby cell towers. We collect and maintain location data to provide users the features and functionality of  our Application.
+Messages and User Content: We collect information when user message other members added on users account through the use of our service. We may also retain any messages users send to us in form of suggestions.
+We use this information to operate, maintain, and provide to you the features and functionality of our application and to communicate directly with you, such as to send you alerts on the movements of your Loved ones, crime alerts in your neighborhood, etc.
+Social Media: When you interact with our site through various social media, such as when you Like us on Facebook/Instagram or post a comment to our page, we may receive information from the social network such as your profile information, profile picture, gender, user name, user ID associated with your social media account, age range, language, country, friends list, and any other information you permit the social network to share with third parties. The data we receive is dependent upon your privacy settings with the social network. You should always review, and if necessary, adjust your privacy settings on third-party websites and services before linking or connecting them to Amigo.
+Information we collect automatically through the use of technology: We may collect analytics data, or use third-party analytics tools such as Google Analytics, to help us measure traffic and usage trends for the Service and to understand more about the demographics of our users.
+                </p></div> <p><strong class="text-2xl" style="font-weight: 500;">Log Data</strong></p> <p>
+                  we want to inform you that whenever you
+                  use our Service, in a case of an error in the app
+                  we collect data and information (through third party
+                  products) on your phone called Log Data. This Log Data may
+                  include information such as your device Internet Protocol
+                  (“IP”) address, device name, operating system version, the
+                  configuration of the app when utilizing our Service,
+                  the time and date of your use of the Service, and other
+                  statistics.
+                </p> <p><strong class="text-2xl" style="font-weight: 500;">Cookies</strong></p> <p>
+                  Cookies are files with a small amount of data that are
+                  commonly used as anonymous unique identifiers. These are sent
+                  to your browser from the websites that you visit and are
+                  stored on your device's internal memory.
+                </p> <p>
+                  This Service does not use these “cookies” explicitly. However,
+                  the app may use third party code and libraries that use
+                  “cookies” to collect information and improve their services.
+                  You have the option to either accept or refuse these cookies
+                  and know when a cookie is being sent to your device. If you
+                  choose to refuse our cookies, you may not be able to use some
+                  portions of this Service.
+                </p> <p><strong class="text-2xl" style="font-weight: 500;">Service Providers</strong></p> <p>
+                  we may employ third-party companies and
+                  individuals due to the following reasons:
+                </p> <ul><li>To facilitate our Service;</li> <li>To provide the Service on our behalf;</li> <li>To perform Service-related services; or</li> <li>To assist us in analyzing how our Service is used.</li></ul> <p>
+                  we want to inform users of this Service
+                  that these third parties have access to your Personal
+                  Information. The reason is to perform the tasks assigned to
+                  them on our behalf. However, they are obligated not to
+                  disclose or use the information for any other purpose.
+                </p> <p><strong class="text-2xl" style="font-weight: 500;">Security</strong></p> <p>
+                  we value your trust in providing us your
+                  Personal Information, thus we are striving to use commercially
+                  acceptable means of protecting it. But remember that no method
+                  of transmission over the internet, or method of electronic
+                  storage is 100% secure and reliable, and we cannot
+                  guarantee its absolute security.
+                </p> <p><strong class="text-2xl" style="font-weight: 500;">Links to Other Sites</strong></p> <p>
+                  This Service may contain links to other sites. If you click on
+                  a third-party link, you will be directed to that site. Note
+                  that these external sites are not operated by us.
+                  Therefore, we strongly advise you to review the
+                  Privacy Policy of these websites. we have
+                  no control over and assume no responsibility for the content,
+                  privacy policies, or practices of any third-party sites or
+                  services.
+                </p> <p><strong class="text-2xl" style="font-weight: 500;">Consent</strong></p>
+                  <ol>
+                    <li>
+                      We are not required to obtain your consent for most of the processing activities that we undertake in respect of your personal information.
+                    </li>
+                    <li>
+                      We may, however, need your consent for certain processing activities. If we need your consent, we will notify you of the personal information we intend to use and how we intend to use it.
+                    </li>
+                    <li>
+                      If you have provided consent for certain processing of your personal information, you have the right to withdraw your consent. If you withdraw your consent, this will not affect the lawfulness of our processing of your personal information before your withdrawal.
+                    </li>
+                    <li>
+                      Where we share your personal information with your consent with third parties for marketing and related purposes, you may withdraw consent at any time you can inform us.
+                    </li>
+                  </ol>
+                   <p><strong class="text-2xl" style="font-weight: 500;">Changes to This Privacy Policy</strong></p> <p>
+                  we may update our Privacy Policy from
+                  time to time. Thus, you are advised to review this page
+                  periodically for any changes. we will
+                  notify you of any changes by posting the new Privacy Policy on
+                  this page.
+                </p>  <p><strong class="text-2xl" style="font-weight: 500;">Contact Us</strong></p> <p>
+                  If you have any questions or suggestions about our
+                  Privacy Policy, do not hesitate to contact us at +917003111645.
+                </p>
+                </div>
+<!-- Footer -->
+<footer class="page-footer font-small indigo mt-20">
+
+    <!-- Footer Links -->
+    <div class="container">
+  
+      <!-- Grid row-->
+      <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+  
+        <!-- Grid column -->
+        <div class="col-md-2 mb-3">
+          <h6 class="text-uppercase font-weight-bold">
+            <a href="aboutus.html">About us</a>
+          </h6>
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-2 mb-3">
+          <h6 class="text-uppercase font-weight-bold">
+            <a href="privatepolicy.html">Privacy Policy</a>
+          </h6>
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-2 mb-3">
+          <h6 class="text-uppercase font-weight-bold">
+            <a href="contact.html">Contact</a>
+          </h6>
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row-->
+      <hr class="rgba-white-light" style="margin: 0 15%;">
+  
+      <!-- Grid row-->
+      <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
+  
+        <!-- Grid column -->
+        <div class="col-md-8 col-12 mt-5">
+          <p style="line-height: 1.7rem">"I'll be there for your cause you're there for me too"</p>
+        </div>
+        <div class="col-md-8 col-12 mt-5">
+          <a href="https://play.google.com/store/apps/details?id=com.altiet.amigo">
+          <button type="button" class="btnfooter ml-4 btn  waves-effect" style="font-weight: 500; font-size: 1.1rem; margin-right: 1rem; padding:10px;"><i class="fa fa-download mr-2"></i> DOWNLOAD NOW</button></a>
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row-->
+      <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 15% 5%;">
+  
+      <!-- Grid row-->
+      <div class="row pb-3">
+  
+        <!-- Grid column -->
+        <div class="col-md-12">
+  
+          <div class="mb-5 flex-center">
+  
+            <!-- Facebook -->
+            <a class="fb-ic" href="https://www.facebook.com/AmigoByAltiett/ ">
+              <i class="fab fa-facebook-f fa-lg white-text mr-4"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic" href="https://www.instagram.com/amigo_altiett/ ">
+              <i class="fab fa-instagram fa-lg white-text mr-4"> </i>
+            </a>
+            <!-- youtube -->
+            <a class="ins-ic" href="https://www.youtube.com/channel/UCsYaiGaw0EyWl0iDm9q8oCQ?view_as=subscriber">
+              <i class=" fab fa-youtube fa-lg white-text mr-4"> </i>
+            </a>
+          </div>
+  
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row-->
+  
+    </div>
+    <!-- Footer Links -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="index.html"> Amigo.com</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/CSSRulePlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script>
+      $(document).ready(function() {
+//Preloader
+preloaderFadeOutTime = 500;
+function hidePreloader() {
+var preloader = $('.spinner-wrapper');
+preloader.fadeOut(preloaderFadeOutTime);
+}
+hidePreloader();
+});
+      document.querySelector("#navbtn").addEventListener("click",()=>{
+  document.getElementById("navbar").style.background="white";
+})
+        // enrty animation
+  let tlentry=gsap.timeline()
+.from("body",1,{opacity:0})
+.to('#navbar',{opacity:1,y:0},"+=0.1")
+.from(".topanime",{opacity:0,y:-20})
+.from(".hrabout",{scale:0})
+.from(".topanime1",{opacity:0,y:-20,stagger:0.5})
+.from(".leftanime",2,{opacity:0,x:50},"-=1.5");
+
+let controller= new ScrollMagic.Controller();
+
+let tlnav=gsap.timeline()
+.to(".nav-link",0.01,{color:"white"})
+.to(".line",0.01,{background:"white"})
+.to("nav",0.01,{background:"rgba(63,81,181,0.9)"},"-=0.01")
+.to(".ftlbtn",0.01,{color:"white"},"-0.01");
+
+
+let navscene=new ScrollMagic.Scene({
+  offset:1,
+  triggerHook:0,
+})
+.setTween(tlnav)
+.addTo(controller);
+
+
+
+document.querySelectorAll(".navitem").forEach((x,i)=>{
+  x.addEventListener("mouseover",()=>{
+    gsap.to(x.children[0],{background:"rgba(10,10,10,0)",duration:0.4})
+    gsap.to(x.children[0].children[0],{scale:1,opacity:1,duration:0.4})
+    })
+    x.addEventListener("mouseout",()=>{
+      gsap.to(x.children[0].children[0],{scale:0,opacity:0,duration:0.4})
+      })
+})
+document.querySelectorAll(".navicons").forEach((x)=>{
+  x.addEventListener("mouseenter",()=>{
+gsap.timeline()
+.set(x.children[0].children[0],{scale:0})
+.to(x.children[0].children[0],{scale:1})
+    })
+})
+
+
+
+
+
+let swiper = new Swiper('.swiper-container', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows : true,
+    },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+  });
+
+  document.querySelector(".navbar-toggler").addEventListener("click",()=>{
+    console.log(document.querySelector("nav").style.backgroundColor);
+      if(document.querySelector("nav").style.background==""||document.querySelector("nav").style.backgroundColor=="rgba(10, 10, 10, 0)"){
+        document.querySelector("nav").style.background="rgba(63,81,181,0.9)";
+        document.querySelector(".ftlbtn").style.color="white";
+        document.querySelectorAll(".nav-link").forEach((x)=>{
+          x.style.color="white";
+        })
+        document.querySelectorAll(".line").forEach((x)=>{
+          x.style.background="white";
+        })
+      }
+  })
+  window.addEventListener("scroll", function (event) {
+    if(this.scrollY==0 ){    
+    $('.navbar-collapse').collapse('hide');
+    }
+});
+    </script>
+  </body>
+</html>
