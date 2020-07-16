@@ -1,9 +1,10 @@
 <!doctype html>
 <html lang="en" style="width: fit-content;">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Font Awesome -->
@@ -21,154 +22,195 @@
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
     <!-- Swiper js -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.css">
     <!-- main css -->
     <style>
-
-.spinner-wrapper {
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background-color:#7CD5DB;
-z-index: 999999;
-}
-.sk-chase {
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  top: 48%;
-  left: 48%;
-  animation: sk-chase 2.5s infinite linear both;
-}
-
-.sk-chase-dot {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0; 
-  animation: sk-chase-dot 2.0s infinite ease-in-out both; 
-}
-
-.sk-chase-dot:before {
-  content: '';
-  display: block;
-  width: 25%;
-  height: 25%;
-  background-color: #fff;
-  border-radius: 100%;
-  animation: sk-chase-dot-before 2.0s infinite ease-in-out both; 
-}
-
-.sk-chase-dot:nth-child(1) { animation-delay: -1.1s; }
-.sk-chase-dot:nth-child(2) { animation-delay: -1.0s; }
-.sk-chase-dot:nth-child(3) { animation-delay: -0.9s; }
-.sk-chase-dot:nth-child(4) { animation-delay: -0.8s; }
-.sk-chase-dot:nth-child(5) { animation-delay: -0.7s; }
-.sk-chase-dot:nth-child(6) { animation-delay: -0.6s; }
-.sk-chase-dot:nth-child(1):before { animation-delay: -1.1s; }
-.sk-chase-dot:nth-child(2):before { animation-delay: -1.0s; }
-.sk-chase-dot:nth-child(3):before { animation-delay: -0.9s; }
-.sk-chase-dot:nth-child(4):before { animation-delay: -0.8s; }
-.sk-chase-dot:nth-child(5):before { animation-delay: -0.7s; }
-.sk-chase-dot:nth-child(6):before { animation-delay: -0.6s; }
-
-@keyframes sk-chase {
-  100% { transform: rotate(360deg); } 
-}
-
-@keyframes sk-chase-dot {
-  80%, 100% { transform: rotate(360deg); } 
-}
-
-@keyframes sk-chase-dot-before {
-  50% {
-    transform: scale(0.4); 
-  } 100%, 0% {
-    transform: scale(1.0); 
-  } 
-}
+        .spinner-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #7CD5DB;
+            z-index: 999999;
+        }
+        
+        .sk-chase {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 48%;
+            left: 48%;
+            animation: sk-chase 2.5s infinite linear both;
+        }
+        
+        .sk-chase-dot {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            animation: sk-chase-dot 2.0s infinite ease-in-out both;
+        }
+        
+        .sk-chase-dot:before {
+            content: '';
+            display: block;
+            width: 25%;
+            height: 25%;
+            background-color: #fff;
+            border-radius: 100%;
+            animation: sk-chase-dot-before 2.0s infinite ease-in-out both;
+        }
+        
+        .sk-chase-dot:nth-child(1) {
+            animation-delay: -1.1s;
+        }
+        
+        .sk-chase-dot:nth-child(2) {
+            animation-delay: -1.0s;
+        }
+        
+        .sk-chase-dot:nth-child(3) {
+            animation-delay: -0.9s;
+        }
+        
+        .sk-chase-dot:nth-child(4) {
+            animation-delay: -0.8s;
+        }
+        
+        .sk-chase-dot:nth-child(5) {
+            animation-delay: -0.7s;
+        }
+        
+        .sk-chase-dot:nth-child(6) {
+            animation-delay: -0.6s;
+        }
+        
+        .sk-chase-dot:nth-child(1):before {
+            animation-delay: -1.1s;
+        }
+        
+        .sk-chase-dot:nth-child(2):before {
+            animation-delay: -1.0s;
+        }
+        
+        .sk-chase-dot:nth-child(3):before {
+            animation-delay: -0.9s;
+        }
+        
+        .sk-chase-dot:nth-child(4):before {
+            animation-delay: -0.8s;
+        }
+        
+        .sk-chase-dot:nth-child(5):before {
+            animation-delay: -0.7s;
+        }
+        
+        .sk-chase-dot:nth-child(6):before {
+            animation-delay: -0.6s;
+        }
+        
+        @keyframes sk-chase {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes sk-chase-dot {
+            80%,
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes sk-chase-dot-before {
+            50% {
+                transform: scale(0.4);
+            }
+            100%,
+            0% {
+                transform: scale(1.0);
+            }
+        }
     </style>
     <link rel="stylesheet" href="index.css">
 
     <title>Amigo</title>
-  </head>
-  <body class="smooth-scroll">
+</head>
+
+<body class="smooth-scroll">
     <div class="spinner-wrapper">
-      <div class="sk-chase">
-        <div class="sk-chase-dot"></div>
-        <div class="sk-chase-dot"></div>
-        <div class="sk-chase-dot"></div>
-        <div class="sk-chase-dot"></div>
-        <div class="sk-chase-dot"></div>
-        <div class="sk-chase-dot"></div>
-      </div>
-      </div>
-<nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top" >
+        <div class="sk-chase">
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+        </div>
+    </div>
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top">
 
-  <div class="container-fluid"> 
+        <div class="container-fluid">
 
-    <a class="navbar-brand" href="index.html">
-      <img  class="w-20 ml-0" src="images/logo.png" id="logo" height="30" alt="mdb logo">
-    </a>
+            <a class="navbar-brand" href="index.html">
+                <img class="w-20 ml-0" src="images/logo.png" id="logo" height="30" alt="mdb logo">
+            </a>
 
-    <!-- Collapse button -->
-    <button  id="navbarbtn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-            aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- Collapse button -->
+            <button id="navbarbtn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Links -->
-    <div class="collapse navbar-collapse" id="basicExampleNav">
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="basicExampleNav">
 
-      <!-- Left -->
-      <ul class="navbar-nav mr-auto ">
-        <li class="nav-item ml-4 navitem">
-          <a class="nav-link " href="#" >Home<div class="line"></div></a>
-        </li>
-        <li class="nav-item ml-4 navitem">
-          <a class="nav-link " href="aboutus.html" >About Us<div class="line"></div></a>
-        </li>
-        <li class="nav-item ml-4 navitem">
-          <a class="nav-link" href="contact.html" >Contact <div class="line"></div></a>
-        </li>
-      </ul>
+                <!-- Left -->
+                <ul class="navbar-nav mr-auto ">
+                    <li class="nav-item ml-4 navitem">
+                        <a class="nav-link " href="#">Home<div class="line"></div></a>
+                    </li>
+                    <li class="nav-item ml-4 navitem">
+                        <a class="nav-link " href="aboutus.html">About Us<div class="line"></div></a>
+                    </li>
+                    <li class="nav-item ml-4 navitem">
+                        <a class="nav-link" href="contact.html">Contact <div class="line"></div></a>
+                    </li>
+                </ul>
 
-      <!-- Right -->
-      <ul class="navbar-nav nav-flex-icons">
-        <a href="https://play.google.com/store/apps/details?id=com.altiet.amigo">
-        <button  type="button" class="ftlbtn ml-4 btn  waves-effect" style="color:#3c3950;font-weight: 500; font-size: 1.1rem; margin-right: 1rem; padding:10px;"><i class="fa fa-download mr-2"></i> DOWNLOAD NOW</button></a>
-        <li class="nav-item navicons">
-          <a href="https://www.facebook.com/AmigoByAltiett/ " class="nav-link" >
-            <i class="fab fa-facebook-f"></i>
-          </a>
-        </li> 
-        <li class="nav-item navicons">
-          <a href="https://www.instagram.com/amigo_altiett/ " class="nav-link" >
-            <i class="fab fa-instagram"></i>
-          </a>
-        </li>
-        <li class="nav-item navicons">
-          <a href="https://www.youtube.com/channel/UCsYaiGaw0EyWl0iDm9q8oCQ?view_as=subscriber" class="nav-link ">
-            <i class="fab fa-youtube"></i>
-          </a>
-        </li>
-      </ul>
+                <!-- Right -->
+                <ul class="navbar-nav nav-flex-icons">
+                    <a href="https://play.google.com/store/apps/details?id=com.altiet.amigo">
+                        <button type="button" class="ftlbtn ml-4 btn  waves-effect" style="color:#3c3950;font-weight: 500; font-size: 1.1rem; margin-right: 1rem; padding:10px;"><i class="fa fa-download mr-2"></i> DOWNLOAD NOW</button></a>
+                    <li class="nav-item navicons">
+                        <a href="https://www.facebook.com/AmigoByAltiett/ " class="nav-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item navicons">
+                        <a href="https://www.instagram.com/amigo_altiett/ " class="nav-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item navicons">
+                        <a href="https://www.youtube.com/channel/UCsYaiGaw0EyWl0iDm9q8oCQ?view_as=subscriber" class="nav-link ">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
 
-    </div>
+            </div>
 
-  </div>
+        </div>
 
-</nav>
+    </nav>
 
-      
-        <!--Main-->
 
-          <!-- Left Col -->
-          <!-- <div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
+    <!--Main-->
+
+    <!-- Left Col -->
+    <!-- <div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
             <h1 class="my-4 text-3xl md:text-5xl text-purple-800 font-bold leading-tight text-center md:text-left slide-in-bottom-h1 lg:ml-20 pl-lg-3" style="color: #3F51B5;">AMIGO</h1>
             <p class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">YOUR SAFETY IN YOUR HANDS </p>
             <div class="flex w-full justify-center xl:justify-start pb-24 lg:pb-0 fade-in">
@@ -179,317 +221,335 @@ z-index: 999999;
           </div>
           
           <!--Right Col-->
-          <!-- <div class="w-full xl:w-3/5 py-6 overflow-y-hidden mt-20">
+    <!-- <div class="w-full xl:w-3/5 py-6 overflow-y-hidden mt-20">
             <img class="w-5/6 mx-auto lg:mr-0 slide-in-bottom" src="images/devices.svg">
           </div> -->
-      <div class="container-fluid mx-0 px-0">
+    <div class="container-fluid mx-0 px-0">
         <div class="row" id="pin">
-          <div class="col-lg-6" id="sectionfhf">
-            <div class="row justify-content-center">
-              <div class="col-10 col-xs-8 col-sm-7 col-md-6 col-lg-9 col-xl-8">
-                <img id="phone1" src="images/pic.jpg" class="mt-20 img-fluid" alt="" style="width: 100%; border-radius: 20px;">
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6" id="sectionshf">
-            <div class="row  justify-content-center mt-32">
-              <div class="col-12">
-                <h1 class="text-center headeramigo ml2" style="font-weight: 700;color: #3F51B5;"> WELCOME TO - AMIGO</h1>
-              </div>
-              <div class="col-12 mt-10">
-                <h1 class="ml6">
-
-                </h1>
-                <h4 class=" ml16 text-center textsliderh ">                 
-                  <span class="text-wrapper ">
-                  <span class="letters">YOUR SAFETY IN YOUR HANDS</span>
-                </span>
-               </h4>
-
-              </div>
-
-            </div>
-            <div class="row justify-content-center pr-10 mt-20">
-              <div class="col-4">
-                <a href="">
-                <div class="click">
-                  <div class="click">
-                    <a href="#"><div style="color: #FF5252;margin-left: 50%;position: absolute;"class="icon "><i class="fas fa-2x fa-chevron-down"></i></div></a>
-                    <a href="#"><div style="color: #FF5252;margin-left: 50%;position: absolute;" class="second icon mt-2"><i class="fas fa-2x fa-chevron-down"></i></div></a>
-                    <a href="#"><div style="color: #FF5252;margin-left: 50%;position: absolute;"class="third icon mt-3"><i class="fas fa-2x fa-chevron-down "></i></div></a>
-                  </div>
-                  <!-- <div style="color: #FF5252;position:absolute;margin-left: 50%;"class="icon icondown"><i class="fas fa-chevron-circle-down fa-3x"></i></div> -->
+            <div class="col-lg-6" id="sectionfhf">
+                <div class="row justify-content-center">
+                    <div class="col-10 col-xs-8 col-sm-7 col-md-6 col-lg-9 col-xl-8">
+                        <img id="phone1" src="images/pic.jpg" class="mt-20 img-fluid" alt="" style="width: 100%; border-radius: 20px;">
+                    </div>
                 </div>
-              </a>
-              </div>
             </div>
-          </div>
+            <div class="col-lg-6" id="sectionshf">
+                <div class="row  justify-content-center mt-32">
+                    <div class="col-12">
+                        <h1 class="text-center headeramigo ml2" style="font-weight: 700;color: #3F51B5;"> WELCOME TO - AMIGO</h1>
+                    </div>
+                    <div class="col-12 mt-10">
+                        <h1 class="ml6">
+
+                        </h1>
+                        <h4 class=" ml16 text-center textsliderh ">
+                            <span class="text-wrapper ">
+                  <span class="letters">YOUR SAFETY IN YOUR HANDS</span>
+                            </span>
+                        </h4>
+
+                    </div>
+
+                </div>
+                <div class="row justify-content-center pr-10 mt-20">
+                    <div class="col-4">
+                        <a href="">
+                            <div class="click">
+                                <div class="click">
+                                    <a href="#">
+                                        <div style="color: #FF5252;margin-left: 50%;position: absolute;" class="icon "><i class="fas fa-2x fa-chevron-down"></i></div>
+                                    </a>
+                                    <a href="#">
+                                        <div style="color: #FF5252;margin-left: 50%;position: absolute;" class="second icon mt-2"><i class="fas fa-2x fa-chevron-down"></i></div>
+                                    </a>
+                                    <a href="#">
+                                        <div style="color: #FF5252;margin-left: 50%;position: absolute;" class="third icon mt-3"><i class="fas fa-2x fa-chevron-down "></i></div>
+                                    </a>
+                                </div>
+                                <!-- <div style="color: #FF5252;position:absolute;margin-left: 50%;"class="icon icondown"><i class="fas fa-chevron-circle-down fa-3x"></i></div> -->
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
     <div class="container-fluid mx-0 px-0">
-      <div class="row" >
-        <div class="col-lg-6" id="sectionshf1">
-          <div class="row  justify-content-center mt-10">
-            <div class="col-12">
-              <h1 class="text-center headeramigo1 " style="font-weight: 700;color: #3F51B5;">ONE AGAINST FIVE-</h1>
-            </div>
-            <div class="col-12">
-              <h4 class="text-center textsliderh1"> </h4>
-            </div>
-            <div class="row cardwomen mt-10" style="box-shadow: 5px 5px 10px ;" >
-            <div class="col-md-6 pt-3 pb-3">
-              <p style="text-align: left; font-family: Roboto; font-weight: 400; color: #3c3950;" class="quotetext">
-                "A new dawn shall arrive<br>
-                Somewhere, someday,<br>
-                Where birds shall not be Devoured<br>
-                By the hounds<br>
-                On lonesome boulevards<br>
-                They shall learn to fly<br>
-                They shall learn to fly."
-              </p>
-            </div>
-            <div class="col-md-6 pt-3 pb-3" >
-<div class="card card-image womenimg"
-  style="background-image: url(images/women.jpg); background-repeat: no-repeat; background-position: center; background-size: cover;">
+        <div class="row">
+            <div class="col-lg-6" id="sectionshf1">
+                <div class="row  justify-content-center mt-10">
+                    <div class="col-12">
+                        <h1 class="text-center headeramigo1 " style="font-weight: 700;color: #3F51B5;">ONE AGAINST FIVE-</h1>
+                    </div>
+                    <div class="col-12">
+                        <h4 class="text-center textsliderh1"> </h4>
+                    </div>
+                    <div class="row cardwomen mt-10" style="box-shadow: 5px 5px 10px ;">
+                        <div class="col-md-6 pt-3 pb-3">
+                            <p style="text-align: left; font-family: Roboto; font-weight: 400; color: #3c3950;" class="quotetext">
+                                "A new dawn shall arrive<br> Somewhere, someday,<br> Where birds shall not be Devoured<br> By the hounds<br> On lonesome boulevards<br> They shall learn to fly<br> They shall learn to fly."
+                            </p>
+                        </div>
+                        <div class="col-md-6 pt-3 pb-3">
+                            <div class="card card-image womenimg" style="background-image: url(images/women.jpg); background-repeat: no-repeat; background-position: center; background-size: cover;">
 
-  <!-- Content -->
-  <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4" style="height: 300px;">
-    <div>
-      <p style="text-align: left; font-family: Roboto;font-weight: 400;color: white;" class="quotetextn">
-        Amigo is there for you, by you, with you for all these five problems and more to come.
-      </p>
+                                <!-- Content -->
+                                <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4" style="height: 300px;">
+                                    <div>
+                                        <p style="text-align: left; font-family: Roboto;font-weight: 400;color: white;" class="quotetextn">
+                                            Amigo is there for you, by you, with you for all these five problems and more to come.
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-6 " id="sectionfhf1" style="background-image: linear-gradient(315deg,#7b85c2 0%, #f5f5ff 74%);">
+                <div class="row justify-content-center">
+                    <div class="col-10 col-xs-8 col-sm-7 col-md-6 col-lg-9 col-xl-8">
+                        <img src="images/pic1.jpg" id="phone2" class="mt-20" alt="" style="width: 100%; border-radius: 20px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
-  </div>
-
-</div>
-            </div>
-          </div>
-              
-            </div>
-        </div>
-    <div class="col-lg-6 " id="sectionfhf1" style="background-image: linear-gradient(315deg,#7b85c2 0%, #f5f5ff 74%);">
-          <div class="row justify-content-center">
-            <div class="col-10 col-xs-8 col-sm-7 col-md-6 col-lg-9 col-xl-8">
-              <img src="images/pic1.jpg" id="phone2" class="mt-20" alt="" style="width: 100%; border-radius: 20px;">
-            </div>
-          </div>
-        </div>
-      </div>
-
-  </div>
-  <div class="container mt-20 mt-lg-5 p-5 z-depth-1 great">
+    <div class="container mt-20 mt-lg-5 p-5 z-depth-1 great">
 
 
-    <!--Section: Content-->
-    <section class="dark-grey-text">
-  
-      <!-- Section heading -->
-      <h2 class="text-center font-weight-bold mb-4 pb-2 greatanime">Why Amigo ?</h2>
-      <!-- Section description -->
-      <p class="text-center lead grey-text mx-auto mb-5 greatanime">Introducing Amigo App, your virtual companion with you, by you, for you, always. Amigo acts as the <br>one-stop platform at the time of emergency.</p>
-  
-      <!-- Grid row -->
-      <div class="row">
-  
-        <!-- Grid column -->
-        <div class="col-lg-5 text-center text-lg-left">
-          <img class="img-fluid mockanime mb-10 md:mt-20 lg:mt-32" src="images/Mockup2.png" alt="Sample image">
-        </div>
-        <!-- Grid column -->
-  
-        <!-- Grid column -->
-        <div class="col-lg-7">
-  
-          <!-- Grid row -->
-          <div class="row mb-3 rightanime">
-  
-            <!-- Grid column -->
-            <div class="col-3 col-md-2">
-              <span class="text-primary"><img src="images/alert.png" alt="" style="height: 40px; width: 40px;"></span>
+        <!--Section: Content-->
+        <section class="dark-grey-text">
+
+            <!-- Section heading -->
+            <h2 class="text-center font-weight-bold mb-4 pb-2 greatanime">Why Amigo ?</h2>
+            <!-- Section description -->
+            <p class="text-center lead grey-text mx-auto mb-5 greatanime">Introducing Amigo App, your virtual companion with you, by you, for you, always. Amigo acts as the <br>one-stop platform at the time of emergency.</p>
+
+            <!-- Grid row -->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-lg-5 text-center text-lg-left">
+                    <img class="img-fluid mockanime mb-10 md:mt-20 lg:mt-32" src="images/Mockup2.png" alt="Sample image">
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-lg-7">
+
+                    <!-- Grid row -->
+                    <div class="row mb-3 rightanime">
+
+                        <!-- Grid column -->
+                        <div class="col-3 col-md-2">
+                            <span class="text-primary"><img src="images/alert.png" alt="" style="height: 40px; width: 40px;"></span>
+
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-xl-10 col-md-11 col-9">
+                            <h5 class="font-weight-bold mb-3">Alert</h5>
+                            <p class="grey-text">Alert app users within 5 km distance and your contacts about the impending danger.</p>
+                        </div>
+                        <!-- Grid column -->
+
+                    </div>
+                    <!-- Grid row -->
+
+                    <!-- Grid row -->
+                    <div class="row mb-3 rightanime">
+
+                        <!-- Grid column -->
+                        <div class="col-3 col-md-2">
+                            <span class="text-primary"><img src="images/group.png" alt="" style="height: 40px; width: 40px;"></span>
+
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-xl-10 col-md-11 col-9">
+                            <h5 class="font-weight-bold mb-3">Create Group</h5>
+                            <p class="grey-text">Get a group created of the app users nearby and your favorite contacts, so that they can together decide a rescue plan for you.</p>
+                        </div>
+                        <!-- Grid column -->
+
+                    </div>
+                    <!-- Grid row -->
+
+                    <!--Grid row-->
+                    <div class="row rightanime mb-3">
+
+                        <!-- Grid column -->
+                        <div class="col-3 col-md-2">
+                            <span class="text-primary"><img src="images/location.png" alt="" style="height: 40px; width: 40px;"></span>
+
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-xl-10 col-md-11 col-9">
+                            <h5 class="font-weight-bold mb-3">Track Location</h5>
+                            <p class="grey-text mb-0">Automatically share your live location details and profile details(name, age, profile pic, for the ease of identification)to all your groups.</p>
+                        </div>
+                        <!-- Grid column -->
+
+                    </div>
+                    <div class="row rightanime mb-3">
+
+                        <!-- Grid column -->
+                        <div class="col-3 col-md-2">
+                            <span class="text-primary"><img src="images/voice.jpg" alt="" style="height: 40px; width: 40px;"></span>
+
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-xl-10 col-md-11 col-9">
+                            <h5 class="font-weight-bold mb-3">Emergency Call</h5>
+                            <p class="grey-text mb-0">Can send voice and video messages with a single tap to all your groups.</p>
+                        </div>
+                        <!-- Grid column -->
+
+                    </div>
+                    <div class="row rightanime mb-3">
+
+                        <!-- Grid column -->
+                        <div class="col-3 col-md-2">
+                            <span class="text-primary"><img src="images/hospital.png" alt="" style="height: 40px; width: 40px;"></span>
+
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-xl-10 col-md-11 col-9">
+                            <h5 class="font-weight-bold mb-3">Search the right route</h5>
+                            <p class="grey-text mb-0">Search for nearby police stations, hospitals, their contact numbers, and routes to safer places in one click.</p>
+                        </div>
+                        <!-- Grid column -->
+
+                    </div>
+                    <!--Grid row-->
+
+                </div>
+                <!--Grid column-->
 
             </div>
-            <!-- Grid column -->
-  
-            <!-- Grid column -->
-            <div class="col-xl-10 col-md-11 col-9">
-              <h5 class="font-weight-bold mb-3">Alert</h5>
-              <p class="grey-text" >Alert app users within 5 km distance and your contacts about the impending danger.</p>
-            </div>
-            <!-- Grid column -->
-  
-          </div>
-          <!-- Grid row -->
-  
-          <!-- Grid row -->
-          <div class="row mb-3 rightanime">
-  
-            <!-- Grid column -->
-            <div class="col-3 col-md-2">
-              <span class="text-primary"><img src="images/group.png" alt="" style="height: 40px; width: 40px;"></span>
+            <!-- Grid row -->
 
-            </div>
-            <!-- Grid column -->
-  
-            <!-- Grid column -->
-            <div class="col-xl-10 col-md-11 col-9">
-              <h5 class="font-weight-bold mb-3">Create Group</h5>
-              <p class="grey-text">Get a group created of the app users nearby and your favorite contacts, so that they can together decide a rescue plan for you.</p>
-            </div>
-            <!-- Grid column -->
-  
-          </div>
-          <!-- Grid row -->
-  
-          <!--Grid row-->
-          <div class="row rightanime mb-3">
-  
-            <!-- Grid column -->
-            <div class="col-3 col-md-2">
-              <span class="text-primary"><img src="images/location.png" alt="" style="height: 40px; width: 40px;"></span>
+        </section>
+        <!--Section: Content-->
 
-            </div>
-            <!-- Grid column -->
-  
-            <!-- Grid column -->
-            <div class="col-xl-10 col-md-11 col-9">
-              <h5 class="font-weight-bold mb-3">Track Location</h5>
-              <p class="grey-text mb-0">Automatically share your live location details and profile details(name, age, profile pic, for the ease of identification)to all your groups.</p>
-            </div>
-            <!-- Grid column -->
-  
-          </div>
-          <div class="row rightanime mb-3">
-  
-            <!-- Grid column -->
-            <div class="col-3 col-md-2">
-              <span class="text-primary"><img src="images/voice.jpg" alt="" style="height: 40px; width: 40px;"></span>
 
-            </div>
-            <!-- Grid column -->
-  
-            <!-- Grid column -->
-            <div class="col-xl-10 col-md-11 col-9">
-              <h5 class="font-weight-bold mb-3">Emergency Call</h5>
-              <p class="grey-text mb-0">Can send voice and video messages with a single tap to all your groups.</p>
-            </div>
-            <!-- Grid column -->
-  
-          </div>
-          <div class="row rightanime mb-3">
-  
-            <!-- Grid column -->
-            <div class="col-3 col-md-2">
-              <span class="text-primary"><img src="images/hospital.png" alt="" style="height: 40px; width: 40px;"></span>
-
-            </div>
-            <!-- Grid column -->
-  
-            <!-- Grid column -->
-            <div class="col-xl-10 col-md-11 col-9">
-              <h5 class="font-weight-bold mb-3">Search the right route</h5>
-              <p class="grey-text mb-0">Search for nearby police stations, hospitals, their contact numbers, and routes to safer places in one click.</p>
-            </div>
-            <!-- Grid column -->
-  
-          </div>
-          <!--Grid row-->
-  
-        </div>
-        <!--Grid column-->
-  
-      </div>
-      <!-- Grid row -->
-  
+    </div>
     </section>
-    <!--Section: Content-->
-  
-  
-  </div>
-</section>
-<section id="section3">
-  <div class="swiper-container">
-  <div class="swiper-wrapper">
-  <div class="swiper-slide w-20"><img src="images/phone1.png " style="height: 100%; width: 100%;" alt=""></div>
-  <div class="swiper-slide w-20"><img src="images/phone2.png " style="height: 100%; width: 100%;" alt=""></div>
-  <div class="swiper-slide w-20"><img src="images/phone3.png " style="height: 100%; width: 100%;" alt=""></div>
-  <div class="swiper-slide w-20"><img src="images/phone4.png " style="height: 100%; width: 100%;" alt=""></div>
-  <div class="swiper-slide w-20"><img src="images/phone5.png " style="height: 100%; width: 100%;" alt=""></div>
-</div>
-<!-- Add Pagination -->
-<div class="swiper-pagination"></div>
-<!-- Add Arrows -->
-<div class="swiper-button-next"></div>
-<div class="swiper-button-prev"></div>
-</div>
-<div class="row justify-content-center"><h2 class="text-center font-bold mt-20 topanime1">DISCOVER RIGHT NOW </h2></div>
-<a href="https://play.google.com/store/apps/details?id=com.altiet.amigo"><div class="row justify-content-center topanime1"><div class="btndownload mt-10  waves-effect waves-light rgba-white-slight">
-DOWNLOAD APP
-</div>
-</div></a>
-</section>
+    <section id="section3">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide w-20"><img src="images/phone1.png " style="height: 100%; width: 100%;" alt=""></div>
+                <div class="swiper-slide w-20"><img src="images/phone2.png " style="height: 100%; width: 100%;" alt=""></div>
+                <div class="swiper-slide w-20"><img src="images/phone3.png " style="height: 100%; width: 100%;" alt=""></div>
+                <div class="swiper-slide w-20"><img src="images/phone4.png " style="height: 100%; width: 100%;" alt=""></div>
+                <div class="swiper-slide w-20"><img src="images/phone5.png " style="height: 100%; width: 100%;" alt=""></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <div class="row justify-content-center">
+            <h2 class="text-center font-bold mt-20 topanime1">DISCOVER RIGHT NOW </h2>
+        </div>
+        <a href="https://play.google.com/store/apps/details?id=com.altiet.amigo">
+            <div class="row justify-content-center topanime1">
+                <div class="btndownload mt-10  waves-effect waves-light rgba-white-slight">
+                    DOWNLOAD APP
+                </div>
+            </div>
+        </a>
+    </section>
     <div class="container-fluid px-0 mx-0 mt-20">
 
-      <section id="videop videosection" style="background-image: url('images/video.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
-        
-        <!-- Modal -->
-        <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-          aria-hidden="true">
-          <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-                <iframe id="player" class="embed-responsive-item" src="https://www.youtube.com/embed/3OR71fVlc_M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-    
-        <div class="mask rgba-black-strong py-5 videosection" >
-          <div class="row justify-content-center">
+        <section id="videop videosection" style="background-image: url('images/video.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
 
-          <div class="container text-center my-5  row flex-column  justify-content-center">
-            <div class="row justify-content-center mt-40">
-            <div class="col-10 col-md-6">
-            <h3 class="font-weight-bold text-center white-text pb-2 pl-10 md:pl-20 videoanime" >Watch Video</h3>
+            <!-- Modal -->
+            <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                            <iframe id="player" class="embed-responsive-item" src="https://www.youtube.com/embed/3OR71fVlc_M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-12 col-md-6">
-            <p class="lead text-center white-text pt-2 mb-0 pl-10 md:pl-20 videoanime" >Amigo - Your Safety in your Hands </p>
-          </div>
-        </div>
-        <div class="row justify-content-center  pl-20">
-          <div class="col-12 col-md-6">
-            <a id="play" style="border-radius:50%;"  class="videoanime btn-floating btn-cyan btn-lg pl-40 mt-10 md:mt-0" data-toggle="modal" data-target="#modal1"><i class="fas fa-play"></i></a>
-          </div>
-        </div>
-          </div>
-          
-        </div>
-    
-        </div>
-    
-      </section>
-    
+
+            <div class="mask rgba-black-strong py-5 videosection">
+                <div class="row justify-content-center">
+
+                    <div class="container text-center my-5  row flex-column  justify-content-center">
+                        <div class="row justify-content-center mt-40">
+                            <div class="col-10 col-md-6">
+                                <h3 class="font-weight-bold text-center white-text pb-2 pl-10 md:pl-20 videoanime">Watch Video</h3>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-6">
+                                <p class="lead text-center white-text pt-2 mb-0 pl-10 md:pl-20 videoanime">Amigo - Your Safety in your Hands </p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center  pl-20">
+                            <div class="col-12 col-md-6">
+                                <a id="play" style="border-radius:50%;" class="videoanime btn-floating btn-cyan btn-lg pl-40 mt-10 md:mt-0" data-toggle="modal" data-target="#modal1"><i class="fas fa-play"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
     </div>
 
-    
 
 
 
-<section id="section4" class="px-0 mx-0 learnsection"style="background: url(images/downloadappbg.jpg); background-size: cover;; width: 100%;">
-      <div class="row">
-        <div class="col-12 col-xl-6">
-        <h1  class="learntext mt-20 lg:ml-20 use text-3xl md:text-5xl topanime2" style="color: white; font-weight: bold">HOW TO USE AMIGO</h1>
-      </div>
-    </div>
-    <div class="row justify-content-center topanime2 ">
-      <div class="col-12">
-        <div class="mt-10"style="overflow:hidden; border-radius: 10px;display: table-cell;text-align: center;vertical-align: middle;"><iframe id="learn"  class="mt-10 sm:mt-20 md:mt-10 ml-10 md:ml-0" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" type="text/html" src="https://www.youtube.com/embed/tnFV5Z2eMnA?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0"></iframe><div style="position: absolute;bottom: 10px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;text-align: center;"><small style="line-height: 1.8;font-size: 0px;background: #fff;"> <a href="https://youtube-embed.com/">Youtube Embed Code</a> </small></div><style>.newst{position:relative;text-align:right;height:420px;width:520px;} #gmap_canvas img{max-width:none!important;background:none!important}</style></div><br />
-      </div>  
-      </div>
-      </section>
-      <!-- <div class="container my-5">
+
+    <section id="section4" class="px-0 mx-0 learnsection" style="background: url(images/downloadappbg.jpg); background-size: cover;; width: 100%;">
+        <div class="row">
+            <div class="col-12 col-xl-6">
+                <h1 class="learntext mt-20 lg:ml-20 use text-3xl md:text-5xl topanime2" style="color: white; font-weight: bold">HOW TO USE AMIGO</h1>
+            </div>
+        </div>
+        <div class="row justify-content-center topanime2 ">
+            <div class="col-12">
+                <div class="mt-10" style="overflow:hidden; border-radius: 10px;display: table-cell;text-align: center;vertical-align: middle;"><iframe id="learn" class="mt-10 sm:mt-20 md:mt-10 ml-10 md:ml-0" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" type="text/html" src="https://www.youtube.com/embed/tnFV5Z2eMnA?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0"></iframe>
+                    <div style="position: absolute;bottom: 10px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;text-align: center;"><small style="line-height: 1.8;font-size: 0px;background: #fff;"> <a href="https://youtube-embed.com/">Youtube Embed Code</a> </small></div>
+                    <style>
+                        .newst {
+                            position: relative;
+                            text-align: right;
+                            height: 420px;
+                            width: 520px;
+                        }
+                        
+                        #gmap_canvas img {
+                            max-width: none!important;
+                            background: none!important
+                        }
+                    </style>
+                </div><br />
+            </div>
+        </div>
+    </section>
+    <!-- <div class="container my-5">
         <section id="section5">
           <div class="container">
           <div class="row justify-content-center pl-20 lg:pl-56 question">
@@ -579,142 +639,144 @@ DOWNLOAD APP
         
         
       </div> -->
-      <section class="d-flex socialsection"  style="background: url(images/connectbg.jpg); background-size: cover;background-position: center;width: 100%;">
+    <section class="d-flex socialsection" style="background: url(images/connectbg.jpg); background-size: cover;background-position: center;width: 100%;">
         <div class="row justify-content-center align-content-center">
-          <div class=" clo-12 col-md-10">
-        <div  style="background:black;opacity: 0.8; z-index: 1; border-radius: 20px;" class="insidesosec">
-          <div class="row justify-content-center align-content-center">
-            <div class="col-xl-4 col-md-6 col-8">
-          <h1  class="text-center md:mt-20 mt-10  textsocial" style="color: white;font-weight: bold;"> GET SOCIAL</h1>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-md-10 col-12">
-          <p id="section6" class="text-center text-3xl md:text-4xl textsocial" style="font-size:1.5rem;font-weight:500;color: white;">WE BELIEVE WE ARE BUILDING A GREAT PRODUCT FOR YOU TO USE AND SHARE WITH WHOM IS IMPORTANT TO YOU.</p>
-      </div>
-    </div>
-          <div class="row justify-content-around">
-           <div class="col-3 ml-0 md:ml-10 iconsocial"><a href href="https://www.facebook.com/AmigoByAltiett/">
-              <i style="color: white; border: 1px solid white; border-radius: 50%;" class=" social1 social fab fa-facebook-f fa-3x"></i>
-            </a> 
+            <div class=" clo-12 col-md-10">
+                <div style="background:black;opacity: 0.8; z-index: 1; border-radius: 20px;" class="insidesosec">
+                    <div class="row justify-content-center align-content-center">
+                        <div class="col-xl-4 col-md-6 col-8">
+                            <h1 class="text-center md:mt-20 mt-10  textsocial" style="color: white;font-weight: bold;"> GET SOCIAL</h1>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-10 col-12">
+                            <p id="section6" class="text-center text-3xl md:text-4xl textsocial" style="font-size:1.5rem;font-weight:500;color: white;">WE BELIEVE WE ARE BUILDING A GREAT PRODUCT FOR YOU TO USE AND SHARE WITH WHOM IS IMPORTANT TO YOU.</p>
+                        </div>
+                    </div>
+                    <div class="row justify-content-around">
+                        <div class="col-3 ml-0 md:ml-10 iconsocial">
+                            <a href href="https://www.facebook.com/AmigoByAltiett/">
+                                <i style="color: white; border: 1px solid white; border-radius: 50%;" class=" social1 social fab fa-facebook-f fa-3x"></i>
+                            </a>
+                        </div>
+
+                        <div class="col-3 iconsocial">
+                            <a href="https://www.instagram.com/amigo_altiett/ ">
+                                <i style="color: white; border: 1px solid white;border-radius: 50%;" class=" social2 social fab fa-instagram fa-3x"></i>
+                            </a>
+                        </div>
+
+                        <div class="col-3 iconsocial">
+                            <a href="https://www.youtube.com/channel/UCsYaiGaw0EyWl0iDm9q8oCQ?view_as=subscriber">
+                                <i style="color: white; border: 1px solid white;border-radius: 50%;" class="social3 social fab fa-youtube fa-3x"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
-          
-            <div  class="col-3 iconsocial"><a href="https://www.instagram.com/amigo_altiett/ ">
-              <i style="color: white; border: 1px solid white;border-radius: 50%;" class=" social2 social fab fa-instagram fa-3x"></i>
-            </a>
-            </div>
-
-            <div class="col-3 iconsocial">
-              <a href="https://www.youtube.com/channel/UCsYaiGaw0EyWl0iDm9q8oCQ?view_as=subscriber">
-              <i style="color: white; border: 1px solid white;border-radius: 50%;" class="social3 social fab fa-youtube fa-3x"></i>
-            </a>
-            </div>
-
-          </div>
         </div>
-                    
-      </div>
-    </div>
-      </section>
-<!-- Footer -->
-<footer class="page-footer font-small indigo">
+    </section>
+    <!-- Footer -->
+    <footer class="page-footer font-small indigo">
 
-  <!-- Footer Links -->
-  <div class="container">
+        <!-- Footer Links -->
+        <div class="container">
 
-    <!-- Grid row-->
-    <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+            <!-- Grid row-->
+            <div class="row text-center d-flex justify-content-center pt-5 mb-3">
 
-      <!-- Grid column -->
-      <div class="col-md-2 mb-3">
-        <h6 class="text-uppercase font-weight-bold">
-          <a href="aboutus.html">About us</a>
-        </h6>
-      </div>
-      <!-- Grid column -->
+                <!-- Grid column -->
+                <div class="col-md-2 mb-3">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <a href="aboutus.html">About us</a>
+                    </h6>
+                </div>
+                <!-- Grid column -->
 
-      <!-- Grid column -->
-      <div class="col-md-2 mb-3">
-        <h6 class="text-uppercase font-weight-bold">
-          <a href="privatepolicy.html">Privacy Policy</a>
-        </h6>
-      </div>
-      <!-- Grid column -->
+                <!-- Grid column -->
+                <div class="col-md-2 mb-3">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <a href="privatepolicy.html">Privacy Policy</a>
+                    </h6>
+                </div>
+                <!-- Grid column -->
 
-      <!-- Grid column -->
+                <!-- Grid column -->
 
-      <!-- Grid column -->
-      <!-- Grid column -->
+                <!-- Grid column -->
+                <!-- Grid column -->
 
-      <!-- Grid column -->
-      <div class="col-md-2 mb-3">
-        <h6 class="text-uppercase font-weight-bold">
-          <a href="contact.html">Contact</a>
-        </h6>
-      </div>
-      <!-- Grid column -->
+                <!-- Grid column -->
+                <div class="col-md-2 mb-3">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <a href="contact.html">Contact</a>
+                    </h6>
+                </div>
+                <!-- Grid column -->
 
-    </div>
-    <!-- Grid row-->
-    <hr class="rgba-white-light" style="margin: 0 15%;">
+            </div>
+            <!-- Grid row-->
+            <hr class="rgba-white-light" style="margin: 0 15%;">
 
-    <!-- Grid row-->
-    <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
+            <!-- Grid row-->
+            <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
 
-      <!-- Grid column -->
+                <!-- Grid column -->
 
-      <div class="col-md-8 col-12 mt-5">
-        <p style="line-height: 1.7rem">"I'll be there for your cause you're there for me too"</p>
-      </div>
-      <div class="col-md-8 col-12 mt-5">
-        <a href="https://play.google.com/store/apps/details?id=com.altiet.amigo">
-        <button type="button" class="btnfooter ml-4 btn  waves-effect" style="font-weight: 500; font-size: 1.1rem; margin-right: 1rem; padding:10px;"><i class="fa fa-download mr-2"></i> DOWNLOAD NOW</button></a>
-      </div>
-      <!-- Grid column -->
+                <div class="col-md-8 col-12 mt-5">
+                    <p style="line-height: 1.7rem">"I'll be there for your cause you're there for me too"</p>
+                </div>
+                <div class="col-md-8 col-12 mt-5">
+                    <a href="https://play.google.com/store/apps/details?id=com.altiet.amigo">
+                        <button type="button" class="btnfooter ml-4 btn  waves-effect" style="font-weight: 500; font-size: 1.1rem; margin-right: 1rem; padding:10px;"><i class="fa fa-download mr-2"></i> DOWNLOAD NOW</button></a>
+                </div>
+                <!-- Grid column -->
 
-    </div>
-    <!-- Grid row-->
-    <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 15% 5%;">
+            </div>
+            <!-- Grid row-->
+            <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 15% 5%;">
 
-    <!-- Grid row-->
-    <div class="row pb-3">
+            <!-- Grid row-->
+            <div class="row pb-3">
 
-      <!-- Grid column -->
-      <div class="col-md-12">
+                <!-- Grid column -->
+                <div class="col-md-12">
 
-        <div class="mb-5 flex-center">
+                    <div class="mb-5 flex-center">
 
-          <!-- Facebook -->
-          <a class="fb-ic" href="https://www.facebook.com/AmigoByAltiett/">
-            <i class="fab fa-facebook-f fa-lg white-text mr-4"> </i>
-          </a>
-          <!--Instagram-->
-          <a class="ins-ic" href="https://www.instagram.com/amigo_altiett/ ">
-            <i class="fab fa-instagram fa-lg white-text mr-4"> </i>
-          </a>
-          <!-- youtube -->
-          <a class="ins-ic" href="https://www.youtube.com/channel/UCsYaiGaw0EyWl0iDm9q8oCQ?view_as=subscriber">
-            <i class=" fab fa-youtube fa-lg white-text mr-4"> </i>
-          </a>
+                        <!-- Facebook -->
+                        <a class="fb-ic" href="https://www.facebook.com/AmigoByAltiett/">
+                            <i class="fab fa-facebook-f fa-lg white-text mr-4"> </i>
+                        </a>
+                        <!--Instagram-->
+                        <a class="ins-ic" href="https://www.instagram.com/amigo_altiett/ ">
+                            <i class="fab fa-instagram fa-lg white-text mr-4"> </i>
+                        </a>
+                        <!-- youtube -->
+                        <a class="ins-ic" href="https://www.youtube.com/channel/UCsYaiGaw0EyWl0iDm9q8oCQ?view_as=subscriber">
+                            <i class=" fab fa-youtube fa-lg white-text mr-4"> </i>
+                        </a>
+                    </div>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row-->
+
         </div>
+        <!-- Footer Links -->
 
-      </div>
-      <!-- Grid column -->
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="index.html"> Amigo.com</a>
+        </div>
+        <!-- Copyright -->
 
-    </div>
-    <!-- Grid row-->
-
-  </div>
-  <!-- Footer Links -->
-
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="index.html"> Amigo.com</a>
-  </div>
-  <!-- Copyright -->
-
-</footer>
-<!-- Footer -->
+    </footer>
+    <!-- Footer -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
@@ -728,208 +790,291 @@ DOWNLOAD APP
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
-    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script src="index.js"></script>
-      <script>
-let textWrapper = document.querySelector('.ml2');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    <script>
+        let textWrapper = document.querySelector('.ml2');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-anime.timeline({loop: false})
-  .add({
-    targets: '.ml2 .letter',
-    scale: [4,1],
-    opacity: [0,1],
-    translateZ: 0,
-    easing: "easeOutExpo",
-    delay: 3000,
-    duration: 3000,
-    delay: (el, i) => 70*i
-  })
-$(document).ready(function() {
-//Preloader
-preloaderFadeOutTime = 500;
-function hidePreloader() {
-var preloader = $('.spinner-wrapper');
-preloader.fadeOut(preloaderFadeOutTime);
-}
-hidePreloader();
-});
+        anime.timeline({
+                loop: false
+            })
+            .add({
+                targets: '.ml2 .letter',
+                scale: [4, 1],
+                opacity: [0, 1],
+                translateZ: 0,
+                easing: "easeOutExpo",
+                delay: 3000,
+                duration: 3000,
+                delay: (el, i) => 70 * i
+            })
+        $(document).ready(function() {
+            //Preloader
+            preloaderFadeOutTime = 500;
 
-anime.timeline({loop: true})
-  .add({
-    targets: '.ml6 .letter',
-    translateY: ["1.1em", 0],
-    translateZ: 0,
-    duration: 750,
-    delay: (el, i) => 50 * i
-  }).add({
-    targets: '.ml6',
-    opacity: 0,
-    duration: 1000,
-    easing: "easeOutExpo",
-    delay: 1000
-  });
+            function hidePreloader() {
+                var preloader = $('.spinner-wrapper');
+                preloader.fadeOut(preloaderFadeOutTime);
+            }
+            hidePreloader();
+        });
+
+        anime.timeline({
+                loop: true
+            })
+            .add({
+                targets: '.ml6 .letter',
+                translateY: ["1.1em", 0],
+                translateZ: 0,
+                duration: 750,
+                delay: (el, i) => 50 * i
+            }).add({
+                targets: '.ml6',
+                opacity: 0,
+                duration: 1000,
+                easing: "easeOutExpo",
+                delay: 1000
+            });
     </script>
     <script>
+        let controller1 = new ScrollMagic.Controller();
+
+        let tl1 = gsap.timeline()
+            .from(".videoanime", {
+                opacity: 0,
+                y: 40,
+                stagger: 0.5
+            });
+
+
+        let scene1 = new ScrollMagic.Scene({
+                triggerElement: "#videop",
+                triggerHook: 0.5,
+
+            })
+            .setTween(tl1)
+            .addTo(controller1);
 
 
 
 
 
-let controller1= new ScrollMagic.Controller();
-
-let tl1=gsap.timeline()
-.from(".videoanime",{opacity:0,y:40,stagger:0.5});
-
-
-let scene1=new ScrollMagic.Scene({
-  triggerElement:"#videop",
-  triggerHook:0.5,
-
-})
-.setTween(tl1)
-.addTo(controller1);
 
 
 
+        let tl3 = gsap.timeline()
+            .from(".topanime", {
+                opacity: 0,
+                y: 20,
+                stagger: 0.5
+            })
+            .from(".rightanime1", {
+                opacity: 0,
+                x: -20,
+                stagger: 0.3
+            });
 
 
 
-
-
-let tl3=gsap.timeline()
-.from(".topanime",{opacity:0,y:20,stagger:0.5})
-.from(".rightanime1",{opacity:0,x:-20,stagger:0.3});
-
-
-
-let scene3=new ScrollMagic.Scene({
-  triggerElement:"#section2",
-  triggerHook:1,
-  reverse:false,
-})
-.setTween(tl3)
-.addTo(controller1);
+        let scene3 = new ScrollMagic.Scene({
+                triggerElement: "#section2",
+                triggerHook: 1,
+                reverse: false,
+            })
+            .setTween(tl3)
+            .addTo(controller1);
 
 
 
-let tl4=gsap.timeline()
-.from(".topanime1",{opacity:0,y:20,stagger:0.5});
+        let tl4 = gsap.timeline()
+            .from(".topanime1", {
+                opacity: 0,
+                y: 20,
+                stagger: 0.5
+            });
 
 
 
-let scene4=new ScrollMagic.Scene({
-  triggerElement:".topanime1",
-  triggerHook:0.8,
-  reverse:false,
-})
-.setTween(tl4)
-.addTo(controller1);
+        let scene4 = new ScrollMagic.Scene({
+                triggerElement: ".topanime1",
+                triggerHook: 0.8,
+                reverse: false,
+            })
+            .setTween(tl4)
+            .addTo(controller1);
 
 
-let tl5=gsap.timeline()
-.from(".topanime2",{opacity:0,y:20,stagger:0.5});
-let scene5=new ScrollMagic.Scene({
-  triggerElement:"#section4",
-  triggerHook:0.7,
-  reverse:false,
-})
-.setTween(tl5)
-.addTo(controller1);
-if(window.innerWidth>767){
-  let tl2=gsap.timeline()
-.from(".greatanime",{opacity:0,x:20,stagger:0.6})
-.from(".rightanime",{opacity:0,x:-20,stagger:0.6},"-=0.5");
-
-
-
-let scene2=new ScrollMagic.Scene({
-  triggerElement:".great",
-  triggerHook:1,
-  reverse:false,
-})
-.setTween(tl2)
-.addTo(controller1);
-let tl6=gsap.timeline()
-.set(".icon",{display:"none"})
-.from(".headeramigo1",1,{y:30,opacity:0},"-=0.4")
-.from(".textsliderh1",1,{x:30,opacity:0},"-=0.4")
-.from(".cardwomen",1,{scale:0,opacity:0},"-=0.4")
-.from("#phone2",1,{opacity:0,x:-50},"-=0.5")
-.to(".icon",1,{display:"block",opacity:1});
-let scene6=new ScrollMagic.Scene({
-  triggerElement:"#sectionfhf1",
-  triggerHook:0.9,
-  reverse:false,
-})
-.setTween(tl6)
-.addTo(controller1);}
-else{
-  let tl6=gsap.timeline()
-.set(".icon",{display:"none"})
-.from(".headeramigo1",1,{y:30,opacity:0},"-=0.4")
-.from(".textsliderh1",1,{x:30,opacity:0},"-=0.4")
-.from(".cardwomen",1,{scale:0,opacity:0},"-=0.4")
-.to(".icon",1,{display:"block",opacity:1});
-let scene6=new ScrollMagic.Scene({
-  triggerElement:"#sectionshf1",
-  triggerHook:0.5,
-  reverse:false,
-})
-.setTween(tl6)
-.addTo(controller1);
-let tl61=gsap.timeline()
-.from("#phone2",1,{opacity:0,x:-10})
-let scene61=new ScrollMagic.Scene({
-  triggerElement:"#sectionfhf1",
-  triggerHook:0.5,
-  reverse:false,
-})
-.setTween(tl61)
-.addTo(controller1);
-
-let tl21=gsap.timeline()
-.from(".greatanime",{opacity:0,x:20,stagger:0.6})
-.from(".mockanime",{scale:0,opacity:0})
-.from(".rightanime",{opacity:0,x:-20,stagger:0.3});
+        let tl5 = gsap.timeline()
+            .from(".topanime2", {
+                opacity: 0,
+                y: 20,
+                stagger: 0.5
+            });
+        let scene5 = new ScrollMagic.Scene({
+                triggerElement: "#section4",
+                triggerHook: 0.7,
+                reverse: false,
+            })
+            .setTween(tl5)
+            .addTo(controller1);
+        if (window.innerWidth > 767) {
+            let tl2 = gsap.timeline()
+                .from(".greatanime", {
+                    opacity: 0,
+                    x: 20,
+                    stagger: 0.6
+                })
+                .from(".rightanime", {
+                    opacity: 0,
+                    x: -20,
+                    stagger: 0.6
+                }, "-=0.5");
 
 
 
-let scene21=new ScrollMagic.Scene({
-  triggerElement:".great",
-  triggerHook:0.5,
-  reverse:false,
-})
-.setTween(tl21)
-.addTo(controller1);
+            let scene2 = new ScrollMagic.Scene({
+                    triggerElement: ".great",
+                    triggerHook: 1,
+                    reverse: false,
+                })
+                .setTween(tl2)
+                .addTo(controller1);
+            let tl6 = gsap.timeline()
+                .set(".icon", {
+                    display: "none"
+                })
+                .from(".headeramigo1", 1, {
+                    y: 30,
+                    opacity: 0
+                }, "-=0.4")
+                .from(".textsliderh1", 1, {
+                    x: 30,
+                    opacity: 0
+                }, "-=0.4")
+                .from(".cardwomen", 1, {
+                    scale: 0,
+                    opacity: 0
+                }, "-=0.4")
+                .from("#phone2", 1, {
+                    opacity: 0,
+                    x: -50
+                }, "-=0.5")
+                .to(".icon", 1, {
+                    display: "block",
+                    opacity: 1
+                });
+            let scene6 = new ScrollMagic.Scene({
+                    triggerElement: "#sectionfhf1",
+                    triggerHook: 0.9,
+                    reverse: false,
+                })
+                .setTween(tl6)
+                .addTo(controller1);
+        } else {
+            let tl6 = gsap.timeline()
+                .set(".icon", {
+                    display: "none"
+                })
+                .from(".headeramigo1", 1, {
+                    y: 30,
+                    opacity: 0
+                }, "-=0.4")
+                .from(".textsliderh1", 1, {
+                    x: 30,
+                    opacity: 0
+                }, "-=0.4")
+                .from(".cardwomen", 1, {
+                    scale: 0,
+                    opacity: 0
+                }, "-=0.4")
+                .to(".icon", 1, {
+                    display: "block",
+                    opacity: 1
+                });
+            let scene6 = new ScrollMagic.Scene({
+                    triggerElement: "#sectionshf1",
+                    triggerHook: 0.5,
+                    reverse: false,
+                })
+                .setTween(tl6)
+                .addTo(controller1);
+            let tl61 = gsap.timeline()
+                .from("#phone2", 1, {
+                    opacity: 0,
+                    x: -10
+                })
+            let scene61 = new ScrollMagic.Scene({
+                    triggerElement: "#sectionfhf1",
+                    triggerHook: 0.5,
+                    reverse: false,
+                })
+                .setTween(tl61)
+                .addTo(controller1);
 
-}
+            let tl21 = gsap.timeline()
+                .from(".greatanime", {
+                    opacity: 0,
+                    x: 20,
+                    stagger: 0.6
+                })
+                .from(".mockanime", {
+                    scale: 0,
+                    opacity: 0
+                })
+                .from(".rightanime", {
+                    opacity: 0,
+                    x: -20,
+                    stagger: 0.3
+                });
 
 
-let tl7=gsap.timeline()
-.from(".textsocial",{opacity:0,y:20,stagger:0.5})
-.from(".iconsocial",{opacity:0,scale:0,stagger:0.3});
-let scene7=new ScrollMagic.Scene({
-  triggerElement:"#section6",
-  triggerHook:1,
-  reverse:false,
-})
-.setTween(tl7)
-.addTo(controller1);
 
-let tl8=gsap.timeline()
-.from(".question",{opacity:0,y:20,stagger:0.5})
-let scene8=new ScrollMagic.Scene({
-  triggerElement:".questiontrig",
-  triggerHook:1,
-  reverse:false,
-})
-.setTween(tl8)
-.addTo(controller1);
+            let scene21 = new ScrollMagic.Scene({
+                    triggerElement: ".great",
+                    triggerHook: 0.5,
+                    reverse: false,
+                })
+                .setTween(tl21)
+                .addTo(controller1);
+
+        }
 
 
+        let tl7 = gsap.timeline()
+            .from(".textsocial", {
+                opacity: 0,
+                y: 20,
+                stagger: 0.5
+            })
+            .from(".iconsocial", {
+                opacity: 0,
+                scale: 0,
+                stagger: 0.3
+            });
+        let scene7 = new ScrollMagic.Scene({
+                triggerElement: "#section6",
+                triggerHook: 1,
+                reverse: false,
+            })
+            .setTween(tl7)
+            .addTo(controller1);
+
+        let tl8 = gsap.timeline()
+            .from(".question", {
+                opacity: 0,
+                y: 20,
+                stagger: 0.5
+            })
+        let scene8 = new ScrollMagic.Scene({
+                triggerElement: ".questiontrig",
+                triggerHook: 1,
+                reverse: false,
+            })
+            .setTween(tl8)
+            .addTo(controller1);
     </script>
-  </body>
+</body>
+
 </html>
